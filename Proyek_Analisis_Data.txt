@@ -1,4 +1,4 @@
-proyek_analisis_data.
+requirements.
 
 Dicoding Collection Dashboard
 
