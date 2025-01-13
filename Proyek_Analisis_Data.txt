@@ -1,5 +1,3 @@
-requirements.
-
 Dicoding Collection Dashboard
 
 Setup Environment - Shell/Terminal
