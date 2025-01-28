@@ -33,19 +33,21 @@ col1, col2 = st.columns(2)
 
 with col1:
     total_pemakai_registered = df_all_data['registered'].sum()
-    st.metric("Total Pemakai Registered", value=total_pemakai_registered)
+    st.metric("Pemakai Registered", value=total_pemakai_registered)
 
 with col2:
     total_pemakai_casual = df_all_data['casual'].sum()
-    st.metric("Total Pemakai Casual", value=total_pemakai_casual)
+    st.metric("Pemakai Casual", value=total_pemakai_casual)
 
 fig, ax = plt.subplots(figsize=(16, 8))
-ax.plot(
-    df_all_data['mnth'],
-    df_all_data['registered'],
-    marker='o',
-    linewidth=2,
-    color="#90CAF9"
+    color=["#7CFC00"]
+
+sns.barplot(
+    x="mnth",
+    y="registered",
+    data=df_all_data.sort_values(by="mnth", ascending=False),
+    palette=colors,
+    ax=ax
 )
 ax.tick_params(axis='y', labelsize=20)
 ax.tick_params(axis='x', labelsize=15)
@@ -54,7 +56,23 @@ st.pyplot(fig)
 
 x = np.random.normal(15, 5, 250)
 
-fig, ax = plt.subplots()
-ax.hist(x=x, bins=15)
+fig, ax = plt.subplots(figsize=(16, 8))
+colors = ["#90CAF9"]
+
+sns.barplot(
+    x="mnth",
+    y="casual",
+    data=df_all_data.sort_values(by="mnth", ascending=False),
+    palette=colors,
+    ax=ax
+    )
+ax.tick_params(axis='y', labelsize=20)
+ax.tick_params(axis='x', labelsize=15)
+
 st.pyplot(fig)
-plt.show()
+
+import datetime
+import streamlit as st
+ 
+date = st.date_input(label='Tanggal Sewa Sepeda', min_value=datetime.date(1900, 1, 1))
+st.write('Tanggal Sewa:', date)
