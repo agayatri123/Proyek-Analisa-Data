@@ -40,7 +40,7 @@ with col2:
     st.metric("Pemakai Casual", value=total_pemakai_casual)
 
 fig, ax = plt.subplots(figsize=(16, 8))
-    color=["#7CFC00"]
+    colors=["#7CFC00"]
 
 sns.barplot(
     x="mnth",
