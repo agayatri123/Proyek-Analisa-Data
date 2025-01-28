@@ -12,8 +12,6 @@ Original file is located at
 - **ID Dicoding:** anindita_gayatri_ukA6
 """
 
-!pip install streamlit
-
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -24,7 +22,7 @@ from babel.numbers import format_currency
 sns.set(style='dark')
 
 # load the dataset
-df_all_data= pd.read_csv('sample_data/all_data.csv')
+df_all_data= pd.read_csv('all_data.csv')
 df_all_data.head()
 
 st.title("dashboard")
