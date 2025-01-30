@@ -12,6 +12,11 @@ Original file is located at
 - **ID Dicoding:** anindita_gayatri_ukA6
 """
 
+import datetime
+import streamlit as st
+ 
+date = st.date_input(label='Tanggal Sewa Sepeda', min_value=datetime.date(1900, 1, 1))
+st.write('Tanggal Sewa:', date)
 
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -72,8 +77,4 @@ ax.tick_params(axis='x', labelsize=15)
 
 st.pyplot(fig)
 
-import datetime
-import streamlit as st
- 
-date = st.date_input(label='Tanggal Sewa Sepeda', min_value=datetime.date(1900, 1, 1))
-st.write('Tanggal Sewa:', date)
+
