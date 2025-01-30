@@ -35,8 +35,9 @@ sns.set(style='dark')
 df_all_data= pd.read_csv('all_data.csv')
 df_all_data.head()
 
-st.title("dashboard")
+# Menampilkan 2 Graphic
 
+st.subheader('Streamlit : 2 Grafik Statis')
 st.subheader('Jumlah Pemakai Sewa Sepeda')
 
 col1, col2 = st.columns(2)
