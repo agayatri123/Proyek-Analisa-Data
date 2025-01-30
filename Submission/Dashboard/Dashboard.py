@@ -14,6 +14,10 @@ Original file is located at
 
 import datetime
 import streamlit as st
+
+st.title("dashboard")
+
+st.subheader('Interactive Streamlit')
  
 date = st.date_input(label='Tanggal Sewa Sepeda', min_value=datetime.date(1900, 1, 1))
 st.write('Tanggal Sewa:', date)
